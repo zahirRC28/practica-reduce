@@ -8,6 +8,10 @@
     border-radius: 6px;
     background-color: #ffffff;
 }
+.info {
+    display: flex;
+    flex-direction: row;
+}
 
 .tarjeta.pendiente { 
     background-color: #ffffff; 
@@ -20,11 +24,13 @@
     margin: 0;
     font-weight: bold;
     color: #2d2d2d;
+    margin-right: 1.5rem;
 }
 
 .descripcion {
     margin: 0;
     color: #666666;
+    margin-right: 1.5rem;
 }
 
 .tarjeta.finalizada .titulo,

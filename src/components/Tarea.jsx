@@ -25,7 +25,7 @@ export const Tarea = ({ infoTarea ,cambio ,eliminar}) => {
 
     return (
         <div className={`tarjeta ${claseTarjeta}`}>
-            <div>
+            <div className='info'>
                 <p className="titulo">{infoTarea.titulo}</p>
                 <p className="descripcion">{infoTarea.descripcion}</p>
             </div>

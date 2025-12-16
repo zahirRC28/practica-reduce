@@ -10,6 +10,7 @@ export const Formulario = ({crearTarea}) => {
         const descrip = ev.target.descripcion.value;
         //console.log(descrip)
         if (!nomTarea.trim() || !descrip.trim()) {
+            //Si estan vacios lo detiene para que no haga nada
             return;
         }
 
@@ -25,14 +26,16 @@ export const Formulario = ({crearTarea}) => {
 
         ev.currentTarget.reset();
     }
-  return (
-    <>
-        <h2>Añadir Tarea</h2>
-        <form onSubmit={handleSummit}>
-            <input type="text" name="nombreTarea" id="nombreTarea" placeholder="Cual es el nombre de tu tarea ?"/>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Aqui la descripcion de tu tarea"/>
-            <input type="submit" value="agregar"/>
-        </form>
-    </> 
-  )
+    return (
+        <>
+            <div className="form-container">
+                <h2>Añadir tarea</h2>
+                <form onSubmit={handleSummit}>
+                    <input type="text" name="nombreTarea" id="nombreTarea" placeholder="Cual es el nombre de tu tarea"/>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Aqui la descripcion de tu tarea"/>
+                    <input type="submit" value="Añadir Tarea"/>
+                </form>
+            </div>
+        </> 
+    )
 }
